@@ -5,6 +5,13 @@
 	"title": "International travel estimates by country of residence (March 2024 - March 2025)",
 	"projection": {"type": "equalEarth"},
 	"layer" : [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
+        "format": {"type": "topojson", "feature": "oceans"}
+      },
+      "mark": {"type": "geoshape", "fill": "skyblue"}
+    },
 	  {
 		"data": {
 		  "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/2_symbol_map/js/WorldMapWithGraticules.topojson",
@@ -23,7 +30,7 @@
 		"data": {
 		  "url": "https://raw.githubusercontent.com/Kaattiiee/3179/refs/heads/main/week%209%20homework/tourists%20country%20of%20residence.csv"
 		},
-		"mark": {"type": "circle"},
+		"mark": {"type": "circle", "opacity": 1},
 		"encoding": {
 		  "longitude": {"field": "longitude", "type": "quantitative"},
 		  "latitude": {"field": "latitude", "type": "quantitative"},
