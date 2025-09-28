@@ -1,24 +1,23 @@
-country,trips_2025(000)
-New Zealand,1216
-Japan,314
-Hong Kong,189
-Singapore,325
-Malaysia,169
-Indonesia,190
-Taiwan,128
-Thailand,90
-Vietnam,166
-Philippines,156
-Korea,301
-China,681
-India,390
-Other Asia,200
-United States of America,663
-Canada,155
-United Kingdom,578
-Germany,151
-Scandinavia,79
-France,114
-Italy,62
-Netherlands,50
-Switzerland,40
+country,number of tourists(000),latitude,longitude
+New Zealand,1216.0,-40.900557,174.885971
+Japan,314.0,36.204824,138.252924
+Hong Kong,189.0,22.396428,114.109497
+Singapore,325.0,1.352083,103.819836
+Malaysia,169.0,4.210484,101.975766
+Indonesia,190.0,-0.789275,113.921327
+Taiwan,128.0,23.69781,120.960515
+Thailand,90.0,15.870032,100.992541
+Vietnam,166.0,14.058324,108.277199
+Philippines,156.0,12.879721,121.774017
+China,681.0,35.86166,104.195397
+India,390.0,20.593684,78.96288
+United States of America,663.0,37.09024,-95.712891
+Canada,155.0,56.130366,-106.346771
+United Kingdom,578.0,55.378051,-3.435973
+Germany,151.0,51.165691,10.451526
+France,114.0,46.227638,2.213749
+Italy,62.0,41.87194,12.56738
+Netherlands,50.0,52.132633,5.291266
+Switzerland,40.0,46.818188,8.227512
+South Korea,150.0,35.907757,127.766922
+North Korea,150.5,40.339852,127.510093
