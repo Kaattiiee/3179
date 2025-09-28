@@ -21,7 +21,7 @@
 	  },
 	  {
 		"data": {
-		  "url": "https://raw.githubusercontent.com/Kaattiiee/3179/refs/heads/main/tourists%20country%20of%20residence.csv"
+		  "url": "https://raw.githubusercontent.com/Kaattiiee/3179/refs/heads/main/week%209%20homework/tourists%20country%20of%20residence.csv"
 		},
 		"mark": {"type": "circle"},
 		"encoding": {
