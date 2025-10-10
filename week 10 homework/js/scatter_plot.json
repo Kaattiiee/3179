@@ -1,0 +1,31 @@
+{
+	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+	"width": 450,
+	"height": 350,
+	"title": "Number of Tourists VS Total Spend",
+	"data": {
+		"url": "https://raw.githubusercontent.com/Kaattiiee/3179/refs/heads/main/week%209%20homework/tourists%20country%20of%20residence.csv"
+	},
+	"mark": {
+		"type": "circle",
+		"color": "black",
+		"size": 100
+	},
+	"encoding": {
+		"x": {
+			"field": "number of tourists(000)",
+			"type": "quantitative",
+			"title": "Number of tourists(000)"
+		},
+		"y": {
+			"field": "total_spend($M)",
+			"type": "quantitative",
+			"title": "Total Spend ($M)"
+		},
+		"tooltip": [
+			{"field": "country", "type": "nominal"},
+			{"field": "number of tourists(000)", "type": "quantitative"},
+			{"field": "total_spend($M)", "type": "quantitative"}
+		]
+	}
+}
