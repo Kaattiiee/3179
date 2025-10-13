@@ -1,4 +1,4 @@
-country,number_trips(000),nights_travelled(000),total_spend_in_Australia($M)
+country,number_trips_k,nights_travelled_k,total_spend_in_Australia_M
 New Zealand,872.0469926259211,10319.340240952493,1573.4914208092612
 Japan,255.90384666387178,9244.262097254408,1026.4352637537115
 Hong Kong,136.05906998933128,3463.5140458942205,620.3729616093862
