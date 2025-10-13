@@ -1,6 +1,6 @@
 {
 	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-	"title": "Relationship between Nights and Total Spend of inbound tourists",
+	"title": "Relationship between Nights and Total Spend of inbound tourists (Mar 2024 - Mar 2025)",
 	"width": 600,
 	"height": 400,
 	"data": {

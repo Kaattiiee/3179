@@ -1,0 +1,48 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 450,
+    "title": "Seasonal Tourist Arrivials (Jul 2017 - Jul 2025)",
+    "data": {
+        "url": "https://kaattiiee.github.io/3179/assignment%202/datasets/seasonal_by_country.csv"
+    },
+    "selection": {
+        "SeasonFilter": {
+            "type": "multi",
+            "fields": ["season"],
+            "bind": "legend"
+        }
+    },
+    "mark": "bar",
+    "encoding": {
+        "x": {
+            "field": "country",
+            "type": "nominal",
+            "title": "Country",
+            "axis": {"labelAngle": -45},
+            "sort": "-y"
+        },
+        "y": {
+            "field": "num_tourists_k",
+            "type": "quantitative",
+            "title": "Total Number of Tourists"
+        },
+        "color": {
+            "field": "season",
+            "type": "nominal",
+            "title": "Season",
+            "scale": {
+                "domain": ["Summer", "Autumn", "Winter", "Spring"],
+                "range": ["#f4a261", "#2a9d8f", "#264653", "#e9c46a"]
+            }
+        },
+        "tooltip": [
+            {"field": "country", "type": "nominal"},
+            {"field": "season", "type": "nominal"},
+            {"field": "num_tourists_k","type": "quantitative", "format": ","}
+        ]
+    },
+    "transform": [
+        {"filter": {"selection": "SeasonFilter"}}
+    ]
+}
