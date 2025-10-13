@@ -1,0 +1,173 @@
+{
+	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+	"title": {
+	  "text": "Annual Tourists Arrival and Departure for Australia",
+	  "fontSize": 16
+	},
+	"description": "Annual total arrivals and departures with highest and lowest points annotated",
+	"width": 800,
+	"height": 400,
+	"data": { "url": "https://kaattiiee.github.io/3179/assignment%202/datasets/total_no_arrival_depart.csv" },
+	"transform": [
+	  {
+		"fold": ["in_total_visitors", "out_total_visitors"],
+		"as": ["Type", "Number of Tourists"]
+	  },
+	  {
+		"aggregate": [
+		  { "op": "sum", "field": "Number of Tourists", "as": "TotalTourists" }
+		],
+		"groupby": ["year", "Type"]
+	  }
+	],
+	"layer": [
+	  {
+		"mark": "line",
+		"encoding": {
+		  "x": { "field": "year", "type": "ordinal", "title": "Year" },
+		  "y": {
+			"field": "TotalTourists",
+			"type": "quantitative",
+			"title": "Total Number of Tourists",
+			"axis": {"grid": false}
+		  },
+		  "color": {
+			"field": "Type",
+			"type": "nominal",
+			"title": "Type",
+			"scale": {
+			  "domain": ["in_total_visitors", "out_total_visitors"],
+			  "range": ["#1f77b4", "#ff7f0e"]
+			},
+			"legend": {
+			  "labelExpr": "datum.label == 'in_total_visitors' ? 'Arrivals' : 'Departures'"
+			}
+		  }
+		}
+	  },
+  
+	  {
+		"transform": [
+		  {
+			"aggregate": [
+			  { "op": "argmax", "field": "TotalTourists", "as": "max" }
+			],
+			"groupby": ["Type"]
+		  },
+		  {
+			  "calculate": "datum.Type == 'in_total_visitors' ? 'Peak Arrivals ' + datum['max.year'] + ': ' + format(datum['max.TotalTourists'], ',') : 'Peak Departures ' + datum['max.year'] + ': ' + format(datum['max.TotalTourists'], ',')",
+			  "as": "maxLabel"
+		  }
+		],
+		"mark": { "type": "point", "filled": true, "size": 100 },
+		"encoding": {
+		  "x": { "field": "max.year", "type": "ordinal" },
+		  "y": { "field": "max.TotalTourists", "type": "quantitative" },
+		  "color": { "field": "Type", "type": "nominal" }
+		}
+	  },
+	  {
+		"transform": [
+		  {
+			"aggregate": [
+			  { "op": "argmax", "field": "TotalTourists", "as": "max" }
+			],
+			"groupby": ["Type"]
+		  },
+		  {
+			  "calculate": "datum.Type == 'in_total_visitors' ? 'Peak Arrivals ' + datum['max.year'] + ': ' + format(datum['max.TotalTourists'], ',') : 'Peak Departures ' + datum['max.year'] + ': ' + format(datum['max.TotalTourists'], ',')",
+			  "as": "maxLabel"
+		  }
+		],
+		"mark": { "type": "text", "dy": -15, "dx": 0, "fontWeight": "bold", "align": "center"},
+		"encoding": {
+		  "x": { "field": "max.year", "type": "ordinal" },
+		  "y": { "field": "max.TotalTourists", "type": "quantitative" },
+		  "text": {"field": "maxLabel", "type": "nominal"},
+		  "color": { "field": "Type", "type": "nominal" }
+		}
+	  },
+  
+  
+  
+	  {
+		"transform": [
+		  {
+			"aggregate": [
+			  { "op": "argmin", "field": "TotalTourists", "as": "min" }
+			],
+			"groupby": ["Type"]
+		  }
+		],
+		"mark": { "type": "point", "filled": true, "size": 100 },
+		"encoding": {
+		  "x": { "field": "min.year", "type": "ordinal" },
+		  "y": { "field": "min.TotalTourists", "type": "quantitative" },
+		  "color": { "field": "Type", "type": "nominal" }
+		}
+	  },
+  
+  
+	  {
+		"transform": [
+		  {
+			"aggregate": [
+			  { "op": "argmin", "field": "TotalTourists", "as": "min" }
+			],
+			"groupby": ["Type"]
+		  },
+		  {"filter": "datum.Type == 'in_total_visitors'" },
+		  {
+			  "calculate": "'Lowest Arrivals ' + datum['min.year'] + ': ' + format(datum['min.TotalTourists'], ',')",
+			  "as": "minLabel"
+		  }
+		],
+		"mark": { 
+		  "type": "text", 
+			"fontWeight": "bold",
+		  "align": "right" ,
+		  "dx": -55,
+		  "dy": -10	
+	  },
+		"encoding": {
+		  "x": { "field": "min.year", "type": "ordinal" },
+		  "y": { "field": "min.TotalTourists", "type": "quantitative" },
+		  "text": {
+			"field": "minLabel",
+			"type": "nominal"
+		  },
+		  "color": { "field": "Type", "type": "nominal" }
+		}
+	  },
+  
+	  {
+		  "transform": [
+			  {
+				  "aggregate": [
+					  {"op": "argmin", "field": "TotalTourists", "as": "min"}
+				  ],
+				  "groupby": ["Type"]
+			  },
+			  {"filter": "datum.Type == 'out_total_visitors'"},
+			  {
+				  "calculate": "'Lowest Departures ' + datum['min.year'] + ': ' + format(datum['min.TotalTourists'], ',')",
+				  "as": "minLabel"
+			  }
+		  ],
+		  "mark": {
+			  "type": "text",
+			  "fontWeight": "bold",
+			  "baseline": "top",
+			  "dy": -10,
+			  "dx": 20,
+			  "align": "left"
+		  },
+		  "encoding": {
+			  "x": {"field": "min.year", "type": "ordinal"},
+			  "y": {"field": "min.TotalTourists", "type": "quantitative"},
+			  "text": {"field": "minLabel", "type": "nominal"},
+			  "color": { "field": "Type", "type": "nominal" }
+		  }
+	  }
+	]
+  }  
