@@ -1,8 +1,14 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 800,
-    "height": 450,
-    "title": "Seasonal Tourist Arrivials (Jul 2017 - Jul 2025)",
+    "width": 400,
+    "height": 225,
+    "background": "rgb(247, 245, 245)", 
+    "config": {
+        "view": {
+            "fill": "rgb(247, 245, 245)",
+            "stroke": "transparent"
+        }
+    },
     "data": {
         "url": "https://kaattiiee.github.io/3179/assignment%202/datasets/seasonal_by_country.csv"
     },

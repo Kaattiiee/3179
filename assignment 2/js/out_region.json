@@ -1,0 +1,14 @@
+{
+	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+	"width": 700,
+	"height": 350,
+	"data": {
+		"url": "./datasets/out_region.csv"
+	},
+	"mark": {"type": "bar", "tooltip": true},
+	"encoding": {
+		"x": {
+			"field": ""
+		}
+	}
+}

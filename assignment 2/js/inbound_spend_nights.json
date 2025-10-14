@@ -1,8 +1,14 @@
 {
 	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-	"title": "Relationship between Nights and Total Spend of inbound tourists (Mar 2024 - Mar 2025)",
-	"width": 600,
-	"height": 400,
+	"background": "rgb(247, 245, 245)",
+  	"config": {
+    	"view": {
+      	"fill": "rgb(247, 245, 245)",
+      	"stroke": "transparent"
+    	}
+	},
+	"width": 375,
+	"height": 250,
 	"data": {
 	  "url": "https://kaattiiee.github.io/3179/assignment%202/datasets/in_spend_nights.csv"
 	},
@@ -11,12 +17,14 @@
 	  "x": {
 		"field": "nights_travelled_k",
 		"type": "quantitative",
-		"title": "Nights Travelled (000)"
+		"title": "Nights Travelled (000)",
+		"axis": {"grid": false}
 	  },
 	  "y": {
 		"field": "total_spend_in_Australia_M",
 		"type": "quantitative",
-		"title": "Total Spend in Australia ($M)"
+		"title": "Total Spend in Australia ($M)",
+		"axis": {"grid": false}
 	  },
 	  "size": {
 		"field": "number_trips_k",

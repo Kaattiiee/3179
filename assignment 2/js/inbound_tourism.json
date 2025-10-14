@@ -2,7 +2,13 @@
 	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 	"width": 800,
 	"height": 450,
-	"title": "International inbound tourists by country of residence (March 2024 - March 2025)",
+	"background": "rgb(247, 245, 245)",   
+  	"config": {
+    	"view": {
+      		"fill": "rgb(247, 245, 245)",
+      		"stroke": "transparent"
+    	}
+	},
 	"projection": {"type": "equalEarth"},
 	"data": {
 	  "url": "https://kaattiiee.github.io/3179/assignment%202/datasets/in_country_residence.csv"
