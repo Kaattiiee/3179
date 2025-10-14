@@ -3,12 +3,21 @@
 	"width": 700,
 	"height": 350,
 	"data": {
-		"url": "./datasets/out_region.csv"
+		"url": "https://kaattiiee.github.io/3179/assignment%202/datasets/out_region.csv"
 	},
 	"mark": {"type": "bar", "tooltip": true},
 	"encoding": {
 		"x": {
-			"field": ""
-		}
+			"field": "region",
+            "type": "nominal"
+		},
+        "y": {
+            "field": "Total(000)",
+            "type": "quantitative"
+        },
+        "tooltip": [
+            {"field": "region", "type": "nominal"},
+            {"field": "Total(000)", "type": "quantitative"}
+        ]
 	}
 }

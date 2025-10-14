@@ -45,7 +45,7 @@
         "tooltip": [
             {"field": "country", "type": "nominal"},
             {"field": "season", "type": "nominal"},
-            {"field": "num_tourists_k","type": "quantitative", "format": ","}
+            {"field": "num_tourists_k","type": "quantitative", "format": ",.2f"}
         ]
     },
     "transform": [

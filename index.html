@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Overall Tourist Flow of Australia</title>
+	<title>Australia’s Tourism Flows: Inbound and Outbound Journeys</title>
 	<!-- Import Vega & Vega Lite (does not have to be from CDN)-->
 	<script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
 	<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
@@ -16,7 +16,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="https://kaattiiee.github.io/3179/week%2010%20homework/css/styles.css">
+	<link rel="stylesheet" href="./css/styles.css">
 
 </head>
 
@@ -24,25 +24,49 @@
 
 	<div class="page">
 		<div class="pure-g">
-			<div class="pure-u-1-1">
-				<h1>Overall Tourist Flow of Australia</h1>
+			<div class="pure-u-1-1 header-container">
+				<h1>Australia’s Tourism Flows: Inbound and Outbound Journeys</h1>
+			</div>
+		</div>
+
+		<div class="pure-g">
+			<div class="pure-u-1-3">
+				<div class="description description-left">
+					<p>Australia, a country renowned for its rich and diverse tourism offerings, 
+						attracting millions of visitors each year. Between 2017 and 2025, 
+						Australia's tourism experienced both growth and challenges. In 2021, the 
+						COVID-19 pandemic led to a sharp decline in international travel, affecting 
+						both inbound and outbound travellers. However, the industry is recovering
+						in the years followed and returning to levels close to those before the pandemic.
+					</p>
+				</div>
+			</div>
+			<div class="pure-u-2-3">
+				<div id="vis1" class="vis-container"></div>
+			</div>
+		</div>
+
+		<div class="pure-g">
+			<div class="pure-u-1-1 title-container">
+				<h2>Inbound Tourist to Australia</h2>
 			</div>
 		</div>
 
 		<div class="pure-g">
 			<div class="pure-u-1-1">
-				<div id="vis1" class="vis-container"></div>
+				<div id="vis2" class="vis-container"></div>
 			</div>
 		</div>
 
 		<div class="pure-g">
 			<div class="pure-u-1-1">
 				<div class="description description-left">
-					<p>Between March 2024 and March 2025, a total of 7 million tourists visited Australia.
-						Among the recorded countries of residence, over 1 million tourists were from New Zealand,
-						followed by China with more than 600,000 tourists. The total spending of these tourists while in Australia 
-						was also recorded. Tourists from China spent the most -over 11 billion dollars- followed by tourists
-						from the USA, who spent almost 5 billion dollars. While China contributed both a large number of tourists and the 
+					<p>
+						Between March 2024 and March 2025, a total of almost 5 million tourists visited Australia.
+						Among the recorded countries of residence, over 8 hundred thousand tourists were from New Zealand,
+						followed by China with more than 480,000 tourists. The total spending of these tourists while in Australia 
+						was also recorded. Tourists from China spent the most -over 7 billion dollars- followed by tourists
+						from the USA, who spent over 3 billion dollars. While China contributed both a large number of tourists and the 
 						highest total spending, New Zealand tourists spent less on average despite their large numbers.
 					</p>
 				</div>
@@ -51,19 +75,37 @@
 
 		<div class="pure-g">
 			<div class="pure-u-1-2">
+				<div id="vis3" class="vis-container"></div>
+			</div>
+			
+			<div class="pure-u-1-2">
+				<div id="vis4" class="vis-container"></div>
+			</div>
+		</div>
+
+		<div class="pure-g">
+			<div class="pure-u-1-2">
 				<div class="description description-left">
-					<h2>Number of Tourists VS Total spend</h2>
-					<p>The number of tourists from a country often has strong relationship with the total spending by visitors from 
-						that country. Generally, a higher number of tourists corresponds to higher overall spending in Australia.
-						However, China and New Zealand stand out as notable exceptions. China, despite not having the highest number
-						of tourists, accounts for the largest total spending, indicating that Chinese visitors spend more per person 
-						on avergae, likely due to longer stays or participation in high-value tourism activities. While tourists from
-						New Zealand may had shorter visits and therefore lower spending per person. 
-						</p>
+					<p>
+						Tourist spending generally increases with the length of stay, but patterns vary by market. 
+						Tourists from China stand out with the highest spending despite moderate stays, reflecting 
+						strong spending on shopping and experiences. In contrast, visitors from New Zealand tend to 
+						have more visits but spend less on average. In addition, tourists from the USA and UK combine long 
+						visits and high spendings, making them key contributors to Australia's tourism industry.
+					</p>
 				</div>
 			</div>
+			
 			<div class="pure-u-1-2">
-				<div id="vis2" class="vis-container"></div>
+				<div class="description description-right">
+					<p>
+						Travel peaks also varies from country to country. Countries near Australia like New Zealand 
+						has relatively consistent tourist arrivals throughout the year. For Asian countries, particularly
+						China and Japan, seasonal peak occurs during holiday periods such as Lunar New Year and summer 
+						vacations. European countries tend to have more visitors during the Norther Hemisphere's winter
+						months, aligning with Australia's summer season. 
+					</p>
+				</div>
 			</div>
 		</div>
 
@@ -72,13 +114,21 @@
 
 
 	<script type="text/javascript">
-		var specVis1 = "https://raw.githubusercontent.com/Kaattiiee/3179/refs/heads/main/week%2010%20homework/js/map.json";
-		var specVis2 = "https://raw.githubusercontent.com/Kaattiiee/3179/refs/heads/main/week%2010%20homework/js/scatter_plot.json";
+		var specVis1 = "./js/total_arrival_depart.json";
+		var specVis2 = "./js/inbound_tourism.json";
+		var specVis3 = "./js/inbound_spend_nights.json";
+		var specVis4 = "./js/seasonal_by_country.json";
 
 		vegaEmbed('#vis1', specVis1, {"actions": false}).then(function (result) {
 		}).catch(console.error);
 
 		vegaEmbed('#vis2', specVis2, {"actions": false}).then(function (result) {
+		}).catch(console.error);
+
+		vegaEmbed('#vis3', specVis3, {"actions": false}).then(function (result) {
+		}).catch(console.error);
+
+		vegaEmbed('#vis4', specVis4, {"actions": false}).then(function (result) {
 		}).catch(console.error);
 	</script>
 
