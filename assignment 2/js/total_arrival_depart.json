@@ -5,8 +5,8 @@
 	  "fontSize": 16
 	},
 	"description": "Annual total arrivals and departures with highest and lowest points annotated",
-	"width": 500,
-	"height": 250,
+	"width": 550,
+	"height": 275,
 	"data": { "url": "https://kaattiiee.github.io/3179/assignment%202/datasets/total_no_arrival_depart.csv" },
 	"transform": [
 	  {
