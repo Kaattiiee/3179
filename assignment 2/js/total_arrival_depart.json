@@ -1,12 +1,12 @@
 {
 	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 	"title": {
-	  "text": "Annual Tourists Arrival and Departure for Australia (Jul 2017- Jul 2025)",
+	  "text": "Australia Tourists Arrival and Departure (Jul 2017- Jul 2025)",
 	  "fontSize": 16
 	},
 	"description": "Annual total arrivals and departures with highest and lowest points annotated",
-	"width": 400,
-	"height": 200,
+	"width": 500,
+	"height": 250,
 	"data": { "url": "https://kaattiiee.github.io/3179/assignment%202/datasets/total_no_arrival_depart.csv" },
 	"transform": [
 	  {
