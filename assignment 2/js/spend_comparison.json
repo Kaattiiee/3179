@@ -1,0 +1,34 @@
+{
+    "$shema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 400,
+    "title": "Inbound VS outbound tourists spend",
+    "data": {
+        "url": "https://kaattiiee.github.io/3179/assignment%202/datasets/spend_comparison.csv"
+    },
+    "transform": [
+        {
+            "fold": ["inbound spend m", "outbound spend m"],
+            "as": ["type", "spend"]        
+        }
+    ],
+    "mark": "bar",
+    "encoding": {
+        "x": {
+            "field": "year",
+            "type": "ordinal",
+            "axis": {"title": "Year"}
+        },
+        "y": {
+            "field": "spend",
+            "type": "quantitative",
+            "axis": {"title": "Spend (m)"}
+        },
+        "color": {
+            "field": "type",
+            "type": "nominal",
+            "legend": {"title": "travel type"}
+        },
+        "xOffset": {"field": "type"}
+    }
+}
