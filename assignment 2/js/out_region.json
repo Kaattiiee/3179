@@ -2,6 +2,10 @@
 	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 	"width": 700,
 	"height": 350,
+	"title": {
+		"text": "Australian Tourists Departure By Region (Mar 2024 - Mar 2025)",
+		"fontSize": 16
+	},
 	"data": {
 		"url": "https://kaattiiee.github.io/3179/assignment%202/datasets/out_region.csv"
 	},
@@ -9,15 +13,18 @@
 	"encoding": {
 		"x": {
 			"field": "region",
-            "type": "nominal"
+            "type": "nominal",
+			"sort": "-y",
+			"title": "region"
 		},
         "y": {
             "field": "Total(000)",
-            "type": "quantitative"
-        },
+            "type": "quantitative",
+			"title": "Total number of departure tourists (000)"
+		},
         "tooltip": [
             {"field": "region", "type": "nominal"},
-            {"field": "Total(000)", "type": "quantitative"}
+            {"field": "Total(000)", "type": "quantitative", "format": ",.2f"}
         ]
 	}
 }

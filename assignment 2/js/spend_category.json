@@ -1,0 +1,40 @@
+{
+	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+	"width": 350,
+	"title":
+	{
+		"text": "Inbound Tourists Spending By Category (2023-2024)",
+		"fontSize":16,
+		"anchor": "start",
+		"dy": -25
+	},
+	"height": 350,
+	"data": {
+		"url": "https://kaattiiee.github.io/3179/assignment%202/datasets/spending_by_category.csv"
+	},
+	"mark": {
+		"type": "arc",
+		"innerRadius": 80,
+		"tooltip": true
+	},
+	"encoding": {
+		"theta": {
+			"field": "2023-24",
+			"type": "quantitative"
+		},
+		"color": {
+			"field": "category",
+			"type": "nominal",
+			"title": "category of spending"
+		},
+		"tooltip": [
+			{"field": "category",
+			"type": "nominal"},
+			{"field": "2023-24",
+			"type": "quantitative",
+			"format": ",.2f",
+			"title": "total spending ($m)"}
+		]
+	},
+	"view": {"stroke": null}
+}
