@@ -1,0 +1,37 @@
+{
+	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+	"title": {
+		"text": "Tousim filled jobs by Industry (2016-17 to 2023-24)",
+		"fontSize": 16,
+		"dy": -25
+	},
+	"width": 600,
+	"height": 400,
+	"data": {
+		"url": "https://kaattiiee.github.io/3179/assignment%202/datasets/inbound_tourism_job_filled.csv"
+	},
+	"mark": "line",
+	"encoding": {
+		"x": {
+			"field": "year",
+			"type": "ordinal",
+			"title": "Year",
+			"axis": {"labelAngle": 0}
+		},
+		"y": {
+			"field": "num_jobs(000)",
+			"type": "quantitative",
+			"title": "Tourism filled jobs (thousands)"
+		},
+		"color": {
+			"field": "tourism filled job",
+			"type": "nominal",
+			"title": "Industry"
+		},
+		"tooltip": [
+			{"field": "tourism filled job", "type": "nominal"},
+			{"field": "year", "type": "ordinal"},
+			{"field": "num_jobs(000)", "type": "quantitative", "format": ",.2f"}
+		]
+	}
+}
