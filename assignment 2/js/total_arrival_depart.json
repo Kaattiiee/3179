@@ -1,6 +1,10 @@
 {
 	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 	"background": "rgb(247, 245, 245)",
+	"title": {
+		"text": "Total Arrivial and Departure of Tourists (Jul 2017 - Jul 2025)",
+		"fontSize": 14
+	},
   	"config": {
     	"view": {
       		"fill": "rgb(247, 245, 245)",

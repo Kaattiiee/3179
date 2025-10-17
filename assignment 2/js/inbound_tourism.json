@@ -2,6 +2,10 @@
 	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 	"width": 800,
 	"height": 450,
+	"title": {
+		"text": "Inbound Tourists by Country of Residence (Mar 2024 - Mar 2025)",
+		"fontSize": 16
+	},
 	"background": "rgb(247, 245, 245)",   
   	"config": {
     	"view": {

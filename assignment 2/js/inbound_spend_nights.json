@@ -1,5 +1,10 @@
 {
 	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+	"title": {
+		"text": "Tourist Spending VS Nights Travelled (Mar 2024 - Mar 2025)",
+		"fontSize": 16,
+		"dy": -25
+	},
 	"background": "rgb(247, 245, 245)",
   	"config": {
     	"view": {

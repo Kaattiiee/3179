@@ -109,6 +109,44 @@
 			</div>
 		</div>
 
+		<div class="pure-g">
+			<div class="pure-u-1-1 title-container">
+				<h2>Outbound Tourist from Australia</h2>
+			</div>
+		</div>
+
+		<div class="pure-g">
+			<div class="pure-u-1-1">
+				<div id="vis5" class="vis-container"></div>
+			</div>
+		</div>
+
+		<div class="pure-g">
+			<div class="pure-u-1-1">
+				<div class="description description-left">
+					<p>
+						Between March 2024 and March 2025, a total of almost 5 million tourists visited Australia.
+						Among the recorded countries of residence, over 8 hundred thousand tourists were from New Zealand,
+						followed by China with more than 480,000 tourists. The total spending of these tourists while in Australia 
+						was also recorded. Tourists from China spent the most -over 7 billion dollars- followed by tourists
+						from the USA, who spent over 3 billion dollars. While China contributed both a large number of tourists and the 
+						highest total spending, New Zealand tourists spent less on average despite their large numbers.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="pure-g">
+			<div class="pure-u-1-2">
+				<div id="vis6" class="vis-container"></div>
+			</div>
+			
+			<div class="pure-u-1-2">
+				<div id="vis7" class="vis-container"></div>
+			</div>
+		</div>
+
+
 	</div>
 
 
@@ -117,7 +155,10 @@
 		var specVis1 = "./js/total_arrival_depart.json";
 		var specVis2 = "./js/inbound_tourism.json";
 		var specVis3 = "./js/inbound_spend_nights.json";
-		var specVis4 = "./js/seasonal_by_country.json";
+		var specVis4 = "./js/inbound_seasonal_by_country.json";
+		var specVis5 = "./js/outbound_tourism.json";
+		var specVis6 = "./js/out_region.json";
+		var specVis7 = "./js/outbound_seasonal_by_country.json";
 
 		vegaEmbed('#vis1', specVis1, {"actions": false}).then(function (result) {
 		}).catch(console.error);
@@ -129,6 +170,15 @@
 		}).catch(console.error);
 
 		vegaEmbed('#vis4', specVis4, {"actions": false}).then(function (result) {
+		}).catch(console.error);
+
+		vegaEmbed('#vis5', specVis5, {"actions": false}).then(function (result) {
+		}).catch(console.error);
+
+		vegaEmbed('#vis6', specVis6, {"actions": false}).then(function (result) {
+		}).catch(console.error);
+
+		vegaEmbed('#vis7', specVis7, {"actions": false}).then(function (result) {
 		}).catch(console.error);
 	</script>
 
