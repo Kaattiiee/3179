@@ -1,11 +1,22 @@
 {
     "$shema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 800,
-    "height": 400,
-    "title": "Inbound VS outbound tourists spend",
+    "width": 400,
+    "height": 200,
+    "title": {
+        "text": "Inbound VS outbound tourists spend (2016 - 2024)",
+        "fontSize": 16,
+        "dy": -20
+    },
     "data": {
         "url": "https://kaattiiee.github.io/3179/assignment%202/datasets/spend_comparison.csv"
     },
+    "background": "rgb(247, 245, 245)",
+	"config": {
+    	"view": {
+      		"fill": "rgb(247, 245, 245)",
+      		"stroke": "transparent"
+    	}
+	},
     "transform": [
         {
             "fold": ["inbound spend m", "outbound spend m"],

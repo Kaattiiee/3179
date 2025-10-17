@@ -146,6 +146,95 @@
 			</div>
 		</div>
 
+		<div class="pure-g">
+			<div class="pure-u-1-2">
+				<div class="description description-left">
+					<p>
+						Tourist spending generally increases with the length of stay, but patterns vary by market. 
+						Tourists from China stand out with the highest spending despite moderate stays, reflecting 
+						strong spending on shopping and experiences. In contrast, visitors from New Zealand tend to 
+						have more visits but spend less on average. In addition, tourists from the USA and UK combine long 
+						visits and high spendings, making them key contributors to Australia's tourism industry.
+					</p>
+				</div>
+			</div>
+			
+			<div class="pure-u-1-2">
+				<div class="description description-right">
+					<p>
+						Travel peaks also varies from country to country. Countries near Australia like New Zealand 
+						has relatively consistent tourist arrivals throughout the year. For Asian countries, particularly
+						China and Japan, seasonal peak occurs during holiday periods such as Lunar New Year and summer 
+						vacations. European countries tend to have more visitors during the Norther Hemisphere's winter
+						months, aligning with Australia's summer season. 
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="pure-g">
+			<div class="pure-u-1-1 title-container">
+				<h2>Economic Significance of Tourism</h2>
+			</div>
+		</div>
+
+		
+		<div class="pure-g">
+			<div class="pure-u-1-2">
+				<div id="vis8" class="vis-container"></div>
+			</div>
+
+			<div class="pure-u-1-2">
+				<div id="vis9" class="vis-container"></div>
+			</div>
+		</div>
+
+		<div class="pure-g">
+			<div class="pure-u-1-2">
+				<div class="description description-left">
+					<p>
+						Tourist spending generally increases with the length of stay, but patterns vary by market. 
+						Tourists from China stand out with the highest spending despite moderate stays, reflecting 
+						strong spending on shopping and experiences. In contrast, visitors from New Zealand tend to 
+						have more visits but spend less on average. In addition, tourists from the USA and UK combine long 
+						visits and high spendings, making them key contributors to Australia's tourism industry.
+					</p>
+				</div>
+			</div>
+			
+			<div class="pure-u-1-2">
+				<div class="description description-right">
+					<p>
+						Travel peaks also varies from country to country. Countries near Australia like New Zealand 
+						has relatively consistent tourist arrivals throughout the year. For Asian countries, particularly
+						China and Japan, seasonal peak occurs during holiday periods such as Lunar New Year and summer 
+						vacations. European countries tend to have more visitors during the Norther Hemisphere's winter
+						months, aligning with Australia's summer season. 
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="pure-g">
+			<div class="pure-u-1-1">
+				<div id="vis10" class="vis-container"></div>
+			</div>
+		</div>
+
+		<div class="pure-g">
+			<div class="pure-u-1-1">
+				<div class="description description-left">
+					<p>
+						Between March 2024 and March 2025, a total of almost 5 million tourists visited Australia.
+						Among the recorded countries of residence, over 8 hundred thousand tourists were from New Zealand,
+						followed by China with more than 480,000 tourists. The total spending of these tourists while in Australia 
+						was also recorded. Tourists from China spent the most -over 7 billion dollars- followed by tourists
+						from the USA, who spent over 3 billion dollars. While China contributed both a large number of tourists and the 
+						highest total spending, New Zealand tourists spent less on average despite their large numbers.
+					</p>
+				</div>
+			</div>
+		</div>
 
 	</div>
 
@@ -159,6 +248,9 @@
 		var specVis5 = "./js/outbound_tourism.json";
 		var specVis6 = "./js/out_region.json";
 		var specVis7 = "./js/outbound_seasonal_by_country.json";
+		var specVis8 = "./js/spend_comparison.json";
+		var specVis9 = "./js/spend_category.json";
+		var specVis10 = "./js/tourism_job_filled.json";
 
 		vegaEmbed('#vis1', specVis1, {"actions": false}).then(function (result) {
 		}).catch(console.error);
@@ -179,6 +271,15 @@
 		}).catch(console.error);
 
 		vegaEmbed('#vis7', specVis7, {"actions": false}).then(function (result) {
+		}).catch(console.error);
+
+		vegaEmbed('#vis8', specVis8, {"actions": false}).then(function (result) {
+		}).catch(console.error);
+
+		vegaEmbed('#vis9', specVis9, {"actions": false}).then(function (result) {
+		}).catch(console.error);
+
+		vegaEmbed('#vis10', specVis10, {"actions": false}).then(function (result) {
 		}).catch(console.error);
 	</script>
 

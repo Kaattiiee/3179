@@ -5,7 +5,14 @@
 		"fontSize": 16,
 		"dy": -25
 	},
-	"width": 600,
+	"background": "rgb(247, 245, 245)",
+	"config": {
+    	"view": {
+      		"fill": "rgb(247, 245, 245)",
+      		"stroke": "transparent"
+    	}
+	},
+	"width": 850,
 	"height": 400,
 	"data": {
 		"url": "https://kaattiiee.github.io/3179/assignment%202/datasets/inbound_tourism_job_filled.csv"

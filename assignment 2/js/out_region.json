@@ -1,11 +1,19 @@
 {
 	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-	"width": 700,
-	"height": 350,
+	"width": 450,
+	"height": 225,
 	"title": {
 		"text": "Australian Tourists Departure By Region (Mar 2024 - Mar 2025)",
-		"fontSize": 16
+		"fontSize": 16,
+		"dy": -20
 	},
+	"background": "rgb(247, 245, 245)", 
+    "config": {
+        "view": {
+            "fill": "rgb(247, 245, 245)",
+            "stroke": "transparent"
+        }
+    },
 	"data": {
 		"url": "https://kaattiiee.github.io/3179/assignment%202/datasets/out_region.csv"
 	},
