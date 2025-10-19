@@ -38,9 +38,12 @@
 	  },
 	  "tooltip": [
 		{"field": "country", "type": "nominal"},
-		{"field": "number_trips_k", "type": "quantitative", "format": ",.2f"},
-		{"field": "nights_travelled_k", "type": "quantitative", "format": ",.2f"},
-		{"field": "total_spend_in_Australia_M", "type": "quantitative", "format": ",.2f"}
+		{"field": "number_trips_k", "type": "quantitative", "format": ",.2f",
+					"title": "number of trips (000)"},
+		{"field": "nights_travelled_k", "type": "quantitative", "format": ",.2f",
+					"title": "number of nights travelled (000)"},
+		{"field": "total_spend_in_Australia_M", "type": "quantitative", "format": ",.2f",
+					"title": "total spend in Australia ($M)"}
 	  ]
 	}
   }

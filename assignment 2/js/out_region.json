@@ -32,7 +32,8 @@
 		},
         "tooltip": [
             {"field": "region", "type": "nominal"},
-            {"field": "Total(000)", "type": "quantitative", "format": ",.2f"}
+            {"field": "Total(000)", "type": "quantitative", "format": ",.2f",
+				"title": "total number of departures (000)"}
         ]
 	}
 }

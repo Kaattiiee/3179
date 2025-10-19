@@ -49,18 +49,18 @@ body {
 
 .vis-container {
     width: 100%;
-    padding-left: 30px;
-	padding-right: 30px;
+    padding-left: 20px;
+	padding-right: 20px;
 	background-color: rgb(247, 245, 245);
 }
 
 .description-right {
-    padding-left: 30px;
+    padding-left: 20px;
 	font-size: 14px;
 }
 
 .description-left {
-    padding-right: 35px;
+    padding-right: 20px;
 	font-size: 14px;
 }
 

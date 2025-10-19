@@ -1,7 +1,7 @@
 {
 	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 	"title": {
-		"text": "Tousim filled jobs by Industry (2016-17 to 2023-24)",
+		"text": "Tourism filled jobs by Industry (2016-17 to 2023-24)",
 		"fontSize": 16,
 		"dy": -25
 	},
@@ -36,9 +36,10 @@
 			"title": "Industry"
 		},
 		"tooltip": [
-			{"field": "tourism filled job", "type": "nominal"},
+			{"field": "tourism filled job", "type": "nominal", "title": "job industry"},
 			{"field": "year", "type": "ordinal"},
-			{"field": "num_jobs(000)", "type": "quantitative", "format": ",.2f"}
+			{"field": "num_jobs(000)", "type": "quantitative", "format": ",.2f",
+				"title": "number of jobs (000)"}
 		]
 	}
 }
