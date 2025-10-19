@@ -12,8 +12,10 @@
     	}
 	},
 	"description": "Annual total arrivals and departures with highest and lowest points annotated",
-	"width": 550,
-	"height": 275,
+	"width": 600,
+	"height": 300,
+	"layer": [
+	{
 	"data": { "url": "https://kaattiiee.github.io/3179/assignment%202/datasets/total_no_arrival_depart.csv" },
 	"mark": "line",
 	"encoding": {
@@ -40,4 +42,26 @@
 				"title": "total number of tourists"}
 		]
 	}
+},
+{
+	"data": {
+	  "url": "https://kaattiiee.github.io/3179/assignment%202/datasets/total_no_arrival_depart.csv"
+	},
+	"transform": [
+	  {"filter": "datum.year == '2021'"}
+	],
+	"mark": {
+	  "type": "text",
+	  "text": "COVID-19 pandemic: international travel restrictions",
+	  "align": "left",
+	  "dx": 30,
+	  "dy": -20,
+	  "fontSize": 11
+	},
+	"encoding": {
+	  "x": {"field": "year", "type": "ordinal"},
+	  "y": {"field": "total_tourists", "type": "quantitative"}
+	}
+  }
+	]
 }

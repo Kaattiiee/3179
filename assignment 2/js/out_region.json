@@ -14,26 +14,52 @@
             "stroke": "transparent"
         }
     },
-	"data": {
-		"url": "https://kaattiiee.github.io/3179/assignment%202/datasets/out_region.csv"
-	},
-	"mark": {"type": "bar", "tooltip": true},
-	"encoding": {
-		"x": {
-			"field": "region",
-            "type": "nominal",
-			"sort": "-y",
-			"title": "region"
+	"layer": [
+		{
+			"data": {
+				"url": "https://kaattiiee.github.io/3179/assignment%202/datasets/out_region.csv"
+			},
+			"mark": {"type": "bar", "tooltip": true},
+			"encoding": {
+				"x": {
+					"field": "region",
+            		"type": "nominal",
+					"sort": "-y",
+					"title": "region"
+				},
+        		"y": {
+            		"field": "Total(000)",
+            		"type": "quantitative",
+					"title": "Total number of departure tourists (000)"
+				},
+        		"tooltip": [
+            		{"field": "region", "type": "nominal"},
+            		{"field": "Total(000)", "type": "quantitative", "format": ",.2f",
+						"title": "total number of departures (000)"}
+        		]
+			}
 		},
-        "y": {
-            "field": "Total(000)",
-            "type": "quantitative",
-			"title": "Total number of departure tourists (000)"
-		},
-        "tooltip": [
-            {"field": "region", "type": "nominal"},
-            {"field": "Total(000)", "type": "quantitative", "format": ",.2f",
-				"title": "total number of departures (000)"}
-        ]
-	}
+		{
+			"data": {
+					"url": "https://kaattiiee.github.io/3179/assignment%202/datasets/out_region.csv"
+			  },
+			  "transform": [
+				{"filter": "datum.region == 'NSW'"}
+			  ],
+			"mark": {
+			  "type": "text",
+			  "text": "NSW & VIC: largest population & most departures",
+			  "align": "center",
+			  "dx": 180,
+			  "dy": -80,
+			  "fontSize": 11,
+			  "fontWeight": "bold"
+			},
+			"encoding": {
+			"x": {"datum": 20000}, 
+			"y": {"datum": 5800} 
+			  }
+		  }
+	]
+	
 }
